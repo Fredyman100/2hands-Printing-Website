@@ -697,6 +697,7 @@ footer a:hover {
 footer .col {
     display: flex;
     justify-items: flex-start;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
