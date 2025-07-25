@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yourdomain.com/index.html</loc>
+    <loc>https://https://fredyman100.github.io/2hands-Printing-Website/index.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/about.html</loc>
+    <loc>https://fredyman100.github.io/2hands-Printing-Website/about.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/products.html</loc>
+    <loc>https://fredyman100.github.io/2hands-Printing-Website/products.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/contact.html</loc>
+    <loc>https://fredyman100.github.io/2hands-Printing-Website/contact.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/cart.html</loc>
+    <loc>https://fredyman100.github.io/2hands-Printing-Website/cart.html</loc>
     <priority>0.7</priority>
   </url>
 </urlset>
