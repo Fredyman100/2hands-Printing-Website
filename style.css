@@ -672,9 +672,24 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row; /* Changed from column to row */
     background: #1f6156;
     color: #b0b3bb;
+    padding: 40px 20px 0 20px; /* Optional: adds padding */
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column; /* Make content inside .col stack vertically */
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    min-width: 180px; /* Optional: set a min width for columns */
+    flex: 1 1 0;     /* Allows columns to grow/shrink equally */
+    margin-right: 20px; /* Space between columns */
+}
+
+footer .col:last-child {
+    margin-right: 0; /* No margin after last column */
 }
 
 footer h4 {
@@ -693,12 +708,6 @@ footer a {
 
 footer a:hover {
     color: #df0606;
-}
-
-footer .col {
-    display: flex;
-    justify-items: flex-start;
-    margin-bottom: 20px;
 }
 
 footer .loggo {
