@@ -1499,3 +1499,130 @@ footer .copyright p {
         padding: 20px;
     }
  }
+
+/* Responsive Header Layout */
+@media (max-width: 900px) {
+  #header {
+    flex-direction: row;
+    padding: 15px 20px;
+  }
+  .header-title-slogan {
+    margin-left: 0;
+    flex: 1;
+    align-items: flex-start;
+  }
+  #navbar {
+    display: none; /* Hide navbar, show mobile menu if you use JS */
+  }
+  #mobile {
+    display: flex !important;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    gap: 10px;
+  }
+}
+
+/* Put logo, title, and icons in a single row */
+#header {
+  position: relative;
+  flex-wrap: wrap;
+}
+.header-title-slogan {
+  flex: 1 1 auto;
+}
+
+#mobile {
+  /* Keep on the right for large screens */
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive Header Layout */
+@media (max-width: 900px) {
+  #header {
+    flex-direction: row;
+    padding: 15px 20px;
+  }
+  .header-title-slogan {
+    margin-left: 0;
+    flex: 1;
+    align-items: flex-start;
+  }
+  #navbar {
+    display: none; /* Hide navbar, show mobile menu if you use JS */
+  }
+  #mobile {
+    display: flex !important;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    gap: 10px;
+  }
+}
+
+/* Put logo, title, and icons in a single row */
+#header {
+  position: relative;
+  flex-wrap: wrap;
+}
+.header-title-slogan {
+  flex: 1 1 auto;
+}
+
+#mobile {
+  /* Keep on the right for large screens */
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 900px) {
+  #hero {
+    padding: 0 20px;
+    height: auto;
+    min-height: 60vh;
+    align-items: flex-start;
+  }
+  #hero h1 {
+    font-size: 2rem;
+    text-align: left;
+  }
+  #hero h2 {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  #hero h4 {
+    font-size: 1rem;
+    text-align: left;
+  }
+  #hero p {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  #hero button {
+    font-size: 1rem;
+  }
+}
+
+/* Optional: For even smaller screens */
+@media (max-width: 500px) {
+  #header {
+    padding: 10px 5px;
+  }
+  #hero {
+    padding: 0 5px;
+  }
+  #hero h1, #hero h2, #hero h4 {
+    font-size: 1rem;
+  }
+}
+
+
