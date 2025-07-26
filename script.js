@@ -47,3 +47,10 @@ document.getElementById('delivery-info-link').addEventListener('click', function
 document.getElementById('close-delivery-info').addEventListener('click', function() {
     document.getElementById('delivery-info-modal').style.display = 'none';
 });
+
+<script>
+document.getElementById('mobile').onclick = function() {
+  var nav = document.getElementById('navbar');
+  nav.classList.toggle('show-menu');
+}
+</script>
