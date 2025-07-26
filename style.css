@@ -1284,11 +1284,6 @@ footer .copyright p {
         margin-bottom: 23px;
     }
     
-    #mobile {
-        display: flex;
-        align-items: center;
-    }
-    
     #mobile i {
         color: #1a1a1a;
         font-size: 24px;
@@ -1388,10 +1383,6 @@ footer .copyright p {
 }
 
 @media (max-width: 477px) {
-
-    .section-p1 {
-        padding: 20px;
-    }
     
     #header {
         padding: 10px 10px;
@@ -1462,7 +1453,7 @@ footer .copyright p {
     }
     
     #product1 .pro {
-        width: 100%;
+        width: 85%;
     }
     
     #contact-details {
