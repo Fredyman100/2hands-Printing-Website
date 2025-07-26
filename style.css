@@ -1611,7 +1611,7 @@ footer .copyright p {
     padding: 0 5px;
   }
  #hero button {
-    padding: 5px 7px;
+    padding: 5px 4px;
     font-size: 1rem;
   }
     
@@ -1621,7 +1621,7 @@ footer .copyright p {
    #hero h2 {
        font-size: 1.3rem;
    }
-   #hero p, li, a, span {
+   #hero p, li, a {
        font-size: 1rem;
    }
 .photo-container, .image-wrapper {
