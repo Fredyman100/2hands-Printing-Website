@@ -14,13 +14,12 @@ html {
 /* Body styles */
 body {
     width: 100%;
-    background: #5c351f;
+    background: #250f03;
     color: #f4f4f4;
     font-size: 16px;
     line-height: 1.6;
     min-height: 100vh;
 }
-
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', 'Segoe UI', 'Roboto', Arial, sans-serif;
@@ -1611,6 +1610,11 @@ footer .copyright p {
   #hero {
     padding: 0 5px;
   }
+ #hero button {
+    padding: 5px 7px;
+    font-size: 1rem;
+  }
+    
   #hero h1, #hero h4 {
     font-size: 1rem;
   }
