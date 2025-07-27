@@ -575,7 +575,7 @@ button.buton2 {
 
 #page-header p {
     font-size: 30px;
-    color: #000318;
+    color: #06cfac;
     text-align: center;
     margin-top: 25px;
 }
@@ -1232,6 +1232,28 @@ footer .copyright p {
     background: #181c24;
     border-radius: 5px;
 }
+/* Base styles for cart table */
+#cart {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#cart th,
+#cart td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+#cart input.qty {
+  width: 60px;
+}
+
 /* Responsive Design */
 @media (max-width: 799px) {
 
@@ -1378,6 +1400,47 @@ footer .copyright p {
         width: 100%;
         min-width: 0;
     }
+    #cart table,
+  #cart thead,
+  #cart tbody,
+  #cart th,
+  #cart td,
+  #cart tr {
+    display: block;
+    width: 100%;
+  }
+
+  #cart thead {
+    display: none; /* Hide table headers */
+  }
+
+  #cart tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+
+  #cart td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  #cart td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  #place-order-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 477px) {
@@ -1633,6 +1696,16 @@ footer .copyright p {
     width: 100%;
     height: auto;
     display: block;
+  }
+    
+/* Smaller phones table*/
+    #cart td {
+    padding-left: 45%;
+  }
+
+  #cart input.qty {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
