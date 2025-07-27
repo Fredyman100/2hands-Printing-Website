@@ -1642,6 +1642,17 @@ footer .copyright p {
     min-height: 60vh;
     align-items: flex-start;
   }
+  #page-header {
+    padding: 40px 15px;
+  }
+
+  #page-header h2 {
+    font-size: 2rem;
+  }
+
+  #page-header p {
+    font-size: 1rem;
+  }
   #hero h1 {
     font-size: 2rem;
     text-align: left;
@@ -1702,10 +1713,20 @@ footer .copyright p {
     #cart td {
     padding-left: 45%;
   }
-
   #cart input.qty {
     width: 100%;
     box-sizing: border-box;
+  }
+      #page-header {
+    padding: 30px 10px;
+  }
+
+  #page-header h2 {
+    font-size: 1.6rem;
+  }
+
+  #page-header p {
+    font-size: 0.95rem;
   }
 }
 
