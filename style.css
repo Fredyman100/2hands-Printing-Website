@@ -1232,132 +1232,407 @@ footer .copyright p {
     background: #181c24;
     border-radius: 5px;
 }
-/* ========== Responsive Design ========== */
+/* Responsive Design */
+@media (max-width: 799px) {
+
+     #header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 20px;
+    }
+    .header-title-slogan {
+        margin-left: 0;
+        margin-top: 8px;
+        align-items: flex-start;
+    }
+    .site-title {
+        font-size: 1.3rem;
+    }
+    .site-slogan {
+        font-size: 0.98rem;
+    }
+    .logo {
+        width: 38px;
+    }
+
+    .section-p1 {
+        padding: 40px 40px;
+    }
+    
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        background-color: #E3E6f3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    
+    #navbar.active {
+        right: 0px;
+    }
+    
+    #navbar li {
+        margin-bottom: 23px;
+    }
+    
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+    
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+    
+    #product1 .pro-container {
+        justify-content: center;
+    }
+    
+    #product1 .pro {
+        margin: 15px 15px;
+    }
+    
+    #banner {
+        height: 20vh;
+    }
+    
+    #sm-banner .banner-box {
+        min-width: 100px;
+        height: 30vh;
+    }
+    
+    #newsletter .form {
+        width: 70%;
+    }
+    
+    #mission-vision,
+    #values,
+    #why-choose-us,
+    #call-to-action {
+        max-width: 98vw;
+        margin: 20px 1vw;
+        padding: 18px 8px;
+        border-radius: 8px;
+        box-shadow: none;
+        text-align: center;
+    }
+    
+    #mission-vision h2,
+    #values h2,
+    #why-choose-us h2,
+    #call-to-action h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    #mission-vision p,
+    #why-choose-us p,
+    #call-to-action p,
+    #values ul {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    
+    #values ul,
+    #why-choose-us ul {
+        padding-left: 18px;
+        text-align: left;
+        margin: 0 auto 10px auto;
+        max-width: 98vw;
+    }
+    
+    #call-to-action .cta-button {
+        display: inline-block;
+        width: 90%;
+        font-size: 1.1rem;
+        padding: 12px 0;
+        margin-top: 10px;
+    }
+       #contact-form-details {
+        flex-direction: column;
+        gap: 24px;
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+    #contact-form-details form {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 477px) {
+    
+    #header {
+        padding: 10px 10px;
+    }
+
+    .site-title {
+        font-size: 1.1rem;
+    }
+    .site-slogan {
+        font-size: 0.9rem;
+    }
+    .logo {
+        width: 30px;
+    }
+
+    #hero {
+        padding: 0 20px;
+        background-position: 55%;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+    
+    #banner {
+        height: 40vh;
+    }
+    
+    #sm-banner .banner-box {
+        height: 40vh;
+    }
+    
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
+    }
+    
+    #newsletter .form {
+        width: 100%;
+    }
+    
+    #newsletter {
+        padding: 40px 20px;
+    }
+    
+    #about-head {
+        flex-direction: column;
+    }
+    
+    #about-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    #about-head div {
+        padding-left: 0px;
+    }
+    
+    #about-clip .video {
+        width: 100%;
+    }
+    
+    #product1 .pro-container {
+        flex-direction: column;
+    }
+    
+    #product1 .pro {
+        width: 95%;
+    }
+    
+    #contact-details {
+        flex-direction: column;
+    }
+    
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    #contact-details .map {
+        width: 100%;
+    }
+    
+    #contact-form-details {
+        flex-direction: column;
+        gap: 24px;
+        padding: 18px 6px;
+    }
+    
+    #contact-form-details form,
+    #contact-form-details .team {
+        width: 100%;
+        min-width: 0;
+    }
+    
+    #cart-add {
+        flex-direction: column;
+    }
+    
+    #Subtotal {
+        width: 100%;
+        padding: 20px;
+    }
+ }
+
+/* Responsive Header Layout */
 @media (max-width: 900px) {
   #header {
     flex-direction: row;
     padding: 15px 20px;
   }
-  #navbar { display: none; }
+  .header-title-slogan {
+    margin-left: 0;
+    flex: 1;
+    align-items: flex-start;
+  }
+  #navbar {
+    display: none; /* Hide navbar, show mobile menu if you use JS */
+  }
   #mobile {
     display: flex !important;
+    align-items: center;
     position: absolute;
     right: 15px;
     top: 15px;
+    gap: 10px;
   }
-  #hero {
-    padding: 0 20px;
-    min-height: 60vh;
-  }
-  .logo { width: 38px; }
-  .section-p1 { padding: 40px 24px; }
 }
 
-@media (max-width: 799px) {
+/* Put logo, title, and icons in a single row */
+#header {
+  position: relative;
+  flex-wrap: wrap;
+}
+.header-title-slogan {
+  flex: 1 1 auto;
+}
+
+#mobile {
+  /* Keep on the right for large screens */
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive Header Layout */
+@media (max-width: 900px) {
   #header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 14px 16px;
+    flex-direction: row;
+    padding: 15px 20px;
   }
   .header-title-slogan {
     margin-left: 0;
-    margin-top: 8px;
-  }
-  .site-title { font-size: 1.3rem; }
-  .site-slogan { font-size: 1.02rem; }
-  .logo { width: 36px; }
-  #navbar.active {
-    display: flex !important;
-    flex-direction: column;
+    flex: 1;
     align-items: flex-start;
-    position: fixed;
-    top: 0; right: 0;
-    height: 100vh;
-    background: #E3E6F3;
-    box-shadow: 0 40px 60px rgba(0,0,0,.1);
-    padding: 80px 0 0 10px;
-    z-index: 100;
-    transition: 0.3s;
   }
-  #close {
-    display: initial;
+  #navbar {
+    display: none; /* Hide navbar, show mobile menu if you use JS */
+  }
+  #mobile {
+    display: flex !important;
+    align-items: center;
     position: absolute;
-    top: 30px;
-    left: 30px;
-    color: #232254;
-    font-size: 24px;
+    right: 15px;
+    top: 15px;
+    gap: 10px;
   }
+}
+
+/* Put logo, title, and icons in a single row */
+#header {
+  position: relative;
+  flex-wrap: wrap;
+}
+.header-title-slogan {
+  flex: 1 1 auto;
+}
+
+#mobile {
+  /* Keep on the right for large screens */
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 900px) {
   #hero {
-    height: 70vh;
-    padding: 0 16px;
-    background-position: top 30% right 30%;
+    padding: 0 20px;
+    height: auto;
+    min-height: 60vh;
+    align-items: flex-start;
   }
-  #mission-vision, #values, #why-choose-us, #call-to-action {
-    max-width: 98vw;
-    margin: 20px 1vw;
-    padding: 18px 8px;
-    border-radius: 8px;
-    box-shadow: none;
-    text-align: center;
+  #hero h1 {
+    font-size: 2rem;
+    text-align: left;
   }
-  #mission-vision h2, #values h2, #why-choose-us h2, #call-to-action h2 {
+  #hero h2 {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    text-align: left;
   }
-  #values ul, #why-choose-us ul {
-    padding-left: 18px;
-    max-width: 98vw;
+  #hero h4 {
+    font-size: 1rem;
+    text-align: left;
   }
-  #contact-form-details {
-    flex-direction: column;
-    gap: 20px;
-    padding: 16px 6px;
-    max-width: 98vw;
+  #hero p {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 15px;
   }
-  #contact-form-details form, #contact-form-details .team {
-    width: 100%;
-    min-width: 0;
+  #hero button {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 477px) {
-  #header {
-    padding: 9px 7px;
-  }
-  .site-title { font-size: 1.07rem; }
-  .site-slogan { font-size: 0.9rem; }
-  .logo { width: 28px; }
-  #hero {
-    padding: 0 10px;
-    min-height: 50vh;
-    background-position: 55%;
-  }
-  h1, .site-title, #hero h1 { font-size: 1.3rem; }
-  h2, .site-slogan, #hero h2 { font-size: 1.02rem; }
-  #banner, #sm-banner .banner-box { height: 35vh; }
-  #newsletter { padding: 36px 8px; }
-  #newsletter .form { width: 100%; }
-  #about-head, #contact-details, #cart-add {
-    flex-direction: column;
-  }
-  #about-head img, #about-clip .video, #contact-details .details, #contact-details .map {
-    width: 100%;
-    margin-bottom: 18px;
-  }
-  #Subtotal { width: 100%; padding: 13px; }
-}
-
-/* Even Smaller Screens */
+/* Optional: For even smaller screens */
 @media (max-width: 500px) {
-  #header { padding: 8px 2px; }
-  #hero { padding: 0 3px; }
-  #hero button { padding: 5px 4px; font-size: 0.96rem; }
-  #hero h1, #hero h4 { font-size: 1rem; }
-  #hero h2 { font-size: 1.1rem; }
-  #hero p, li, a { font-size: 0.97rem; }
-  .photo-container, .image-wrapper {
-    max-width: 320px;
+  #header {
+    padding: 10px 5px;
+  }
+  #hero {
+    padding: 0 5px;
+  }
+ #hero button {
+    padding: 5px 4px;
+    font-size: 1rem;
+  } 
+  #hero h1, #hero h4 {
+    font-size: 1rem;
+  }
+   #hero h2 {
+       font-size: 1.3rem;
+   }
+   #hero p, li, a {
+       font-size: 1rem;
+   }
+.photo-container, .image-wrapper {
+    width: 100%;
+    max-width: 350px; /* Keeps images from stretching too much */
+    margin: 0 auto;
+    height: auto; /* or a fixed aspect ratio with aspect-ratio property */
     aspect-ratio: 16/9;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
