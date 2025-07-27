@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Toggle navigation menu
     const bar = document.getElementById('bar');
     const close = document.getElementById('close'); // optional close button
-    const nav = document.getElementById('navbar') || document.querySelector('#nav-links ul');
+    const nav = document.getElementById('navbar');
 
     if (bar && nav) {
         bar.addEventListener('click', () => {
