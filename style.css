@@ -172,6 +172,7 @@ button.buton2 {
     display: flex;
     align-items: center;
     justify-content: center;
+     gap: 1rem;
 }
 
 #navbar li {
@@ -1759,4 +1760,48 @@ footer .copyright p {
     font-size: 0.95rem;
   }
 }
+/* MOBILE NAVIGATION STYLING */
+@media (max-width: 768px) {
+    #navbar {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        padding: 1rem;
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    #close {
+        display: block;
+        align-self: flex-end;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #bar {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header-title-slogan {
+        text-align: center;
+        font-size: smaller;
+    }
+}
+
 
