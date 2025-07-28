@@ -768,76 +768,17 @@ footer .copyright p {
     overflow-x: auto;
 }
 
-#cart table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
-}
-
-#cart table img {
-    width: 70px;
-}
-
-#cart table td:nth-child(1) {
-    width: 100px;
-    text-align: center;
-}
-
-#cart table td:nth-child(2) {
-    width: 150px;
-    text-align: center;
-}
-
-#cart table td:nth-child(3) {
-    width: 250px;
-    text-align: center;
-}
-
-#cart table td:nth-child(4),
-#cart table td:nth-child(5),
-#cart table td:nth-child(6) {
-    width: 150px;
-    text-align: center;
-}
-
-#cart table td:nth-child(5) input {
-    width: 70px;
-    padding: 10px 5px 10px 15px;
-}
-
-#cart table thead {
-    border: 1px solid #d2d6d1;
-    border-left: none;
-    border-right: none;
-}
-
-#cart table thead td {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 18px 0;
-}
-
-#cart table tbody tr td {
-    padding-top: 15px;
-}
-
-#cart table tbody td {
-    font-size: 13px;
-}
-
-/* Professional Cart Table */
+/* --- Professional Cart Table Styles (Current good styles) --- */
 #cart-table {
     width: 100%;
-    border-collapse: separate;
+    border-collapse: separate; /* Keep separate or change to collapse consistently */
     border-spacing: 0;
     background: #01998c;
     color: #ffffff;
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     box-shadow: 0 2px 16px rgba(0,0,0,0.10);
     border-radius: 12px;
-    overflow: hidden;
+    overflow: hidden; /* Keep this for border-radius on table, but it won't enable scroll */
     margin-bottom: 30px;
 }
 
@@ -872,9 +813,16 @@ footer .copyright p {
     text-align: center;
 }
 
+/* Hide spin buttons for Chrome, Safari, Edge */
+#cart-table input.qty::-webkit-outer-spin-button,
+#cart-table input.qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 #cart-table .subtotal, #cart-table .price {
     font-weight: 600;
-    color: #050503;
+    color: #050503; /* Ensure contrast for readability */
 }
 
 #cart-table tfoot td {
@@ -882,6 +830,24 @@ footer .copyright p {
     color: #ffd700;
     font-size: 18px;
     border-bottom: none;
+}
+
+#place-order-btn.normal {
+    background: #02ca24;
+    color: #232837;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+#place-order-btn.normal:hover {
+    background: #232837;
+    color: #ffd700;
+    border: 1px solid #ffd700;
 }
 
 #place-order-btn.normal {
@@ -1813,4 +1779,108 @@ footer .copyright p {
     }
 }
 
+@media (max-width: 550px) { /* Adjust this breakpoint for when the table should stack */
+    #cart {
+        overflow-x: hidden; /* Disable horizontal scroll when stacking */
+    }
 
+    #cart-table,
+    #cart-table thead,
+    #cart-table tbody,
+    #cart-table th,
+    #cart-table td,
+    #cart-table tr {
+        display: block; /* Make all table elements block-level */
+        width: 100%; 
+    }
+
+    #cart-table thead {
+        display: none; 
+    }
+
+    #cart-table tr {
+        margin-bottom: 20px; /* Space between stacked rows */
+        border: 1px solid #353a4a; 
+        padding: 15px;
+        background: #01998c; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    #cart-table td {
+        border: none; /* Remove individual cell borders within the block */
+        text-align: right; /* Align value to the right */
+        padding-left: 50%; /* Make space for the pseudo-element label */
+        position: relative; /* For absolute positioning of ::before */
+        white-space: normal; /* Allow text to wrap within cells */
+        color: #f4f4f4; /* Ensure text color is visible */
+    }
+
+    /* The magic for labels */
+    #cart-table td::before {
+        content: attr(data-label); /* Get label from HTML data-label attribute */
+        position: absolute;
+        left: 10px;
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        font-weight: bold;
+        text-align: left;
+        white-space: nowrap; /* Keep label on one line */
+        width: calc(50% - 20px); /* Adjust width of label area */
+        color: #ffd700; /* Label color */
+    }
+
+    /* Special handling for input fields within stacked cells */
+    #cart-table input.qty {
+        width: 100%; 
+        box-sizing: border-box; /* Include padding/border in width */
+        margin-top: 5px; 
+        color: #000; 
+        background-color: #f0f0f0; /* Lighter background for inputs */
+    }
+
+    /* Total row and Place Order button for stacked layout */
+    #cart-table tfoot {
+        display: block; /* Make footer also behave as a block */
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #cart-table tfoot tr {
+        border: none; 
+        background: none;
+        padding: 0;
+        margin-bottom: 0;
+        box-shadow: none;
+    }
+
+    #cart-table tfoot td {
+        display: block; /* Each footer cell becomes a block */
+        width: 100%;
+        text-align: center !important; /* Center total and button */
+        padding: 10px 0; /* Adjust padding */
+        border-bottom: none; /* Remove bottom border */
+        color: #f4f4f4; /* Ensure total text is visible */
+    }
+
+    #cart-table tfoot td:first-child { /* Target the "Total:" label cell */
+        text-align: center; /* Center the "Total:" text */
+        padding-left: 0; 
+    }
+
+    #cart-total {
+        font-size: 1.5em; /* Make total stand out */
+        color: #ffd700; 
+        display: block; /* Ensure it takes its own line if needed */
+        margin-top: 5px;
+    }
+
+    #place-order-btn.normal {
+        width: 90%; /* Make button almost full width */
+        max-width: 300px; /* Cap its max width */
+        margin: 15px auto 0 auto; /* Center the button */
+        display: block;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
